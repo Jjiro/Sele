@@ -24,13 +24,12 @@ public class MainApp {
         driver.manage().timeouts().pageLoadTimeout(40, TimeUnit.SECONDS);
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         driver.get("https://www.google.com/");
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         WebElement agreeButton = driver.findElement(By.id("L2AGLb"));
         agreeButton.click();
         driver.findElement(By.name("q")).sendKeys("rocket launch schedule");
         WebElement searchButton = driver.findElement(By.name("btnK"));
         searchButton.click();
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
 
         driver.quit();
     }
